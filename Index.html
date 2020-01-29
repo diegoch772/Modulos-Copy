@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Desk, Modules, Modulos, Escritorios, Modular, Modulares">
+    <meta name="author" content="Diego Chacón">
+    <meta http-equiv="refresh" content="60"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Copy - Modulos Furniture System</title>
+    <link rel="stylesheet" href="scss/style.css" type="text/css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="js/prefixfree.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <!--
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    --> 
+    <link rel="icon" href="img/icon2.png" sizes="192x192">
+</head>
+
+<body>
+    <header>
+        <nav id="nav-principal" >
+            <section class="container">
+                <div id="nav-izq">
+                    <ul>
+                        <li class="nav-text">
+                            <a href="#">About Modulos</a>
+                        </li>
+                        <li class="nav-text">
+                            <a href="#">Materials</a>
+                        </li>
+                        <li class="nav-text">
+                            <a href="#">Our Story</a>
+                        </li>
+                        <li class="nav-text">
+                            <a href="#">Contact us!</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="nav-img">
+                    <a id="nav-a-img" href="#">
+                        <img src="img/nav/logo.svg" alt="">
+                    </a>
+                </div>
+                <div id="nav-der">
+                    <ul>
+                        <li class="navtext"><a href="#">Create your Desk</a></li>
+                        <li class="navtext dropdown" id="dropdown">
+                            <a id="dropdownMenuLink" href="#" onclick="myFunction()" class="dropbtn">Shop <i
+                                    class="fa fa-caret-down"></i></a>
+                            <ul id="myDropdown" class="dropdown-content">
+                                <li class="nav-ddm"><a href="#">Desk configurations</a></li>
+                                <li class="nav-ddm"><a href="#">Modules</a></li>
+                                <li class="nav-ddm"><a href="#">Leg &amp; Accessories</a></li>
+                            </ul>
+                        </li>
+                        <script>
+                            function myFunction() { document.getElementById("myDropdown").classList.toggle("show") }
+
+                            window.onclick = function (event) {
+                                if (!event.target.matches('.dropbtn')) {
+                                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                                    var i;
+                                    for (i = 0; i < dropdowns.lenght; i++) {
+                                        var openDropdown = dropdowns[i];
+                                        if (openDropdown.classList.contains('show')) {
+                                            openDropdown.classList.remove('show');
+                                        }
+                                    }
+                                }
+                            }
+                        </script>
+                    </ul>
+                    <span id="nav-sep"></span>
+                    <a id="nav-car" href="#">
+                        <i class='fas fa-shopping-cart'></i>
+                    </a>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <main>
+        <!-- SLIDER -->
+        <div id="great-slider">
+            <section id="slider" class="container">
+                <div id="slider-text">
+                    <h1>Visiting from Croatia? Check out out exclusive Black Friday stock clearance sale!</h1>
+                    <p>This Black Friday, we're clearing out our stock! We're offering huge discounts on our
+                        presentational and test pieces. As this offer doesn't include international shipping, it is
+                        <strong> exclusive to our customers from Croatia</strong> - check it out while it's hot!</p>
+                    <p>Desk setups starting from from <strong>€399</strong></p>
+                    <a href="#" id="slider-blue-frame">See the deal! <i class='fas fa-arrow-circle-right'></i></a>
+                </div>
+                <div id="slider-img">
+                    <img src="img/slider/slider.jpg" alt="">
+                    <!-- <div id="carrusel">
+                        <div class="carru-div"><img src="img/slider/1.jpg" alt="" class="carru-img"></div>
+                        <div class="carru-div"><img src="img/slider/2.jpg" alt="" class="carru-img"></div>
+                        <div class="carru-div"><img src="img/slider/3.jpg" alt="" class="carru-img"></div>
+                        <div class="carru-div"><img src="img/slider/4.jpg" alt="" class="carru-img"></div>
+                        <div class="carru-div"><img src="img/slider/5.jpg" alt="" class="carru-img"></div>
+                        <div class="carru-div"><img src="img/slider/6.jpg" alt="" class="carru-img"></div>
+                        <div class="carru-div"><img src="img/slider/7.jpg" alt="" class="carru-img"></div>
+                        <div class="carru-div"><img src="img/slider/8.jpg" alt="" class="carru-img"></div>
+                    </div> -->
+                </div>
+            </section>
+        </div>
+
+        <!-- OVERFLOW -->
+        <section id="overflow" class="container">
+            <div id="all-overflow">
+                <div class="over-module">
+                    <div class="img-module">
+                        <img src="img/overflow/1a.png" alt="">
+                        <!--<div class="shadow"></div> Para este caso box-shadow no tiene un desempeño visual apropiado -->
+                        <span class="sombra-baja"></span>
+                    </div>
+                    <div class="text-module">
+                        <img src="img/overflow/1b.svg" alt="">
+                        <span>Organise your cables neatly</span>
+                    </div>
+                </div>
+                <div class="over-module">
+                    <div class="img-module">
+                        <img src="img/overflow/2a.png" alt="">
+                        <span class="sombra-baja"></span>
+                    </div>
+                    <div class="text-module">
+                        <img src="img/overflow/2b.svg" alt="">
+                        <span>Dock your devices into your desk</span>
+                    </div>
+                </div>
+                <div class="over-module">
+                    <div class="img-module">
+                        <img src="img/overflow/3a.png" alt="">
+                        <span class="sombra-baja"></span>
+                    </div>
+                    <div class="text-module">
+                        <img src="img/overflow/3b.svg" alt="">
+                        <span>Aling your docked devices perfectly</span>
+                    </div>
+                </div>
+                <div class="over-module">
+                    <div class="img-module">
+                        <img src="img/overflow/4a.png" alt="">
+                        <span class="sombra-baja"></span>
+                    </div>
+                    <div class="text-module">
+                        <img src="img/overflow/4b.svg" alt="">
+                        <span>Organize your pens and pencils</span>
+                    </div>
+                </div>
+                <div class="over-module">
+                    <div class="img-module">
+                        <img src="img/overflow/5a.png" alt="">
+                        <span class="sombra-baja"></span>
+                    </div>
+                    <div class="text-module">
+                        <img src="img/overflow/5b.svg" alt="">
+                        <span>Wirelessly charge your devices</span>
+                    </div>
+                </div>
+                <div class="over-module">
+                    <div class="img-module">
+                        <img src="img/overflow/6a.png" alt="">
+                        <span class="sombra-baja"></span>
+                    </div>
+                    <div class="text-module">
+                        <img src="img/overflow/6b.svg" alt="">
+                        <span>Plug your devices into the surface</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKETCH -->
+        <div id="great-sketch">
+            <section id="sketch" class="container">
+                <div id="sketch-mod1">
+                    <h1>Modules that keep you perfectly organised.</h1>
+                    <p>One of the features existing owners of Modules Desk point out is the fact that the desk made them
+                        more organised and their desk clutter was reduced. Why? The square modules grid that forms the
+                        surface of the desk intuitivelly leads the user to organise and dedicate positions on the
+                        surface for different items. Alongside this interesting psychological effect, there are also
+                        modules with features that pus this concept enven further!</p>
+                    <span>Do you want to learn how Modules would fit YOUR exact needs? Let us tell you all about
+                        it!</span>
+                    <a href="#">What are YOUR needs? <i class='fas fa-arrow-circle-right'></i></a>
+                </div>
+                <div id="sketch-mod2">
+                    <img src="img/sketch/sketch.png" alt="Dibujo tipo sketch de scritorio">
+                </div>
+            </section>
+        </div>
+
+        <!-- 4C -->
+        <div style="background-color: #f3f2f0;">
+            <section id="c4" class="container">
+                <h3>Shop out best-selling configurations</h3>
+                <!-- ul>(li>article.frame>h4.h4-4c+p.p-4c+span.s-4c+(div>span.info-4c+span.cont-4c^span.s-4c)*2+span.blue-4c)*4 -->
+                <ul>
+                    <li id="l1-c4" class="frame">
+                        <article
+                            style="background-color: #eeeae8; background-image: url(img/4c/l1.jpg); color: #2d2d2d;">
+                            <h4 class="h4-4c">Starter 140x70cm - Aeon Soft Dark</h4>
+                            <p class="p-4c">This is a standard desk size, that is perfectly suited for most use cases
+                                you
+                                may have.</p>
+                            <span class="s-4c"></span>
+                            <div>
+                                <span class="info-4c">Dimensions:</span>
+                                <span class="cont-4c">140x70cm (4x2 modules)</span>
+                            </div>
+                            <span class="s-4c"></span>
+                            <div>
+                                <span class="info-4c">Price from:</span>
+                                <span class="cont_price-4c">$740.00</span>
+                            </div>
+                            <span class="s-4c"></span>
+                            <span class="blue-4c">Personalise and order <i class='fas fa-arrow-circle-right'></i></span>
+                        </article>
+                    </li>
+                    <li id="l2-c4" class="frame">
+                        <article style="background-image: url(img/4c/l2.jpg); background-color: #18252c; color: #fff;">
+                            <h4 class="h4-4c">Electric Sit-Stand Desk 140x70cm</h4>
+                            <p class="p-4c">This is a standard desk size, that is perfectly suited for most use cases
+                                you
+                                may have. It also has an awesome sit-stand electric legs system to keep you fit and
+                                healthy!
+                            </p>
+                            <span class="s-4c" style="background-color: #fff;"></span>
+                            <div>
+                                <span class="info-4c">Dimensions:</span>
+                                <span class="cont-4c">140x70cm (4x2 modules)</span>
+                            </div>
+                            <span class="s-4c" style="background-color: #fff;"></span>
+                            <div>
+                                <span class="info-4c">Price from:</span>
+                                <span class="cont_price-4c">$866.00</span>
+                            </div>
+                            <span class="s-4c" style="background-color: #fff;"></span>
+                            <span class="blue-4c">Personalise and order <i class='fas fa-arrow-circle-right'></i></span>
+                        </article>
+                    </li>
+                    <li id="l3-c4" class="frame">
+                        <article
+                            style="background-image: url(img/4c/l3.jpg); background-color: #eeeae8; color: #2d2d2d;">
+                            <h4 class="h4-4c">Starter 105x70cm - Aeon Soft Dark</h4>
+                            <p class="p-4c">A small but useful desk size that will transform a small space into a
+                                practical,
+                                modern and comfortable work area.</p>
+                            <span class="s-4c"></span>
+                            <div>
+                                <span class="info-4c">Dimensions:</span>
+                                <span class="cont-4c">105x70cm (3x2 modules)</span>
+                            </div>
+                            <span class="s-4c"></span>
+                            <div>
+                                <span class="info-4c">Price from:</span>
+                                <span class="cont_price-4c">$544.00</span>
+                            </div>
+                            <span class="s-4c"></span>
+                            <span class="blue-4c">Personalise and order <i class='fas fa-arrow-circle-right'></i></span>
+                        </article>
+                    </li>
+                    <li id="l4-c4" style="border: none;">
+                        <div id="frame4" class="frame">
+                            <span>Or go to our shop and design your very own desk!</span>
+                            <p class="p-4c">Select a desk size and shape that works best for you from our presets and
+                                add
+                                all the functionalities that will work best for you!</p>
+                            <div>
+                                <a class="blue-4c" href="#">Go to our shop <i class='fas fa-arrow-circle-right'></i></a>
+                                <div id="instruccion-4c" class="instruccion">
+                                    <span>Desing your desk!</span>
+                                    <img src="img/4c/flecha.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- DEV -->
+        <!-- Cambia al seleccionar una opcion de la lista -->
+        <section id="dev" class="container">
+        </section>
+
+        <!-- 3IMG -->
+        <div id="big-img3">
+            <section id="img3" class="container">
+                <div id="img3-child">
+                    <img src="img/3img/list/1.jpg" alt="">
+                    <img src="img/3img/list/2.jpg" alt="">
+                    <div id="big-video">
+                        <div id="little-video">
+                            <video src="img/3img/list/video.mp4" src="img/3img/list/video.webm" autoplay loop></video>
+                        </div>
+                    </div>
+                </div>
+                <div id="img3-second">
+                    <h2>Have (only) the featyres you want in your desk.</h2>
+                    <p>Unlike the standard work desk that has a static surface, the Modulos Desk allows you to make your
+                        own
+                        decision about the features of your work surface and their layout. We have designed a range of
+                        modules with different features, so your Modulos Desk surface can have embedded wireless device
+                        charging, power plugs, device docks and more. You chosse what you need and what you want your
+                        surface to feature.</p>
+                    <ul id="list-3img">
+                        <li class="li-3img">
+                            <img src="img/3img/list/1.svg" alt="" class="icon-3img">
+                            <span>Future proof with upgrades</span>
+                        </li>
+                        <li class="li-3img">
+                            <img src="img/3img/list/2.svg" alt="" class="icon-3img">
+                            <span>Environmentally aware</span>
+                        </li>
+                        <li class="li-3img">
+                            <img src="img/3img/list/3.svg" alt="" class="icon-3img">
+                            <span>Arrives in small boxes</span>
+                        </li>
+                        <li class="li-3img">
+                            <img src="img/3img/list/4.svg" alt="" class="icon-3img">
+                            <span>Hold up to 60kg</span>
+                        </li>
+                        <li class="li-3img">
+                            <img src="img/3img/list/5.svg" alt="" class="icon-3img">
+                            <span>Easy assembly</span>
+                        </li>
+                        <li class="li-3img">
+                            <img src="img/3img/list/6.svg" alt="" class="icon-3img">
+                            <span>Ships to your doorstep</span>
+                        </li>
+                    </ul>
+                    <div>
+                        <a href="#">Learn more about Modulos Desk <i class='fas fa-arrow-circle-right'></i></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ANIMATION -->
+        <section id="animation" class="container">
+        </section>
+
+        <!-- DESCONOCIDO -->
+        <!-- Tiene un desplazamiento de paginas en la horizontal -->
+        <section id="desconocido" class="container">
+        </section>
+
+        <!-- MARCAS -->
+        <div id="marcas">
+            <article id="art-marcas" class="container">
+                <h3>Modulos was featured on:</h3>
+                <div id="img-marcas">
+                    <a href="#" class="logo-marcas">
+                        <img src="img/marcas/1.svg" alt="">
+                    </a>
+                    <a href="#" class="logo-marcas">
+                        <img src="img/marcas/2.svg" alt="">
+                    </a>
+                    <a href="#" class="logo-marcas">
+                        <img src="img/marcas/3.svg" alt="">
+                    </a>
+                    <a href="#" class="logo-marcas">
+                        <img src="img/marcas/4.svg" alt="">
+                    </a>
+                    <a href="#" class="logo-marcas">
+                        <img src="img/marcas/5.svg" alt="">
+                    </a>
+                    <a href="#" class="logo-marcas">
+                        <img src="img/marcas/6.svg" alt="">
+                    </a>
+                </div>
+            </article>
+        </div>
+
+        <!-- VIDEO -->
+        <div id="video">
+            <section class="container">
+                <article>
+                    <div>
+                        <div id="video-div1">
+                            <iframe src="https://www.youtube.com/embed/vgwewrzi-Mg" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Why throw away? Let's have furniture be adaptable</h2>
+                        <p>We are aware that, in todays culture of buying cheap furniture and quickly replacing it, a
+                            lot of
+                            beautiful wood material is not being fully utilised and forests are being cut down without
+                            need.
+                            So from our very beginnings we wanted to create a product that is meant to serve you for a
+                            long,
+                            long time. If you damage it, replace just a part of the surface. If you need it to be larger
+                            or
+                            smaller, simply upgrade or reconfigure. By owning a Modulos Desk, you're taking that extra
+                            step
+                            towards sustainability.</p>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+    <footer>
+
+        <!-- INDICE -->
+        <div id="indice" class="container">
+            <a href="#">
+                <img src="img/indice/modulos.svg" alt="">
+            </a>
+            <nav id="nav-ind">
+                <ul id="ind-contenedor">
+                    <ul class="ind-list">
+                        <li class="li-title">The Company</li>
+                        <li class="li-el">Our Story</li>
+                        <li class="li-el">About Modulos</li>
+                        <li class="li-el">Our thoughts and stories</li>
+                    </ul>
+                    <ul class="ind-list">
+                        <li class="li-title">The Desk</li>
+                        <li class="li-el">Shop the Desk</li>
+                        <li class="li-el">Modules</li>
+                        <li class="li-el">Leg &amp; Accessories</li>
+                    </ul>
+                    <ul class="ind-list">
+                        <li class="li-title">More info</li>
+                        <li class="li-el">Materials</li>
+                        <li class="li-el">Shipping &amp; Warranty</li>
+                        <li class="li-el">Privacy Policy</li>
+                        <li class="li-el">Terms of Service</li>
+                    </ul>
+                    <ul class="ind-list">
+                        <li class="li-title">Keep in touch</li>
+                        <li class="li-el">Contact</li>
+                        <li class="li-social-icons">
+                            <a href="#"></a>
+                            <a href="#"></a>
+                            <a href="#"></a>
+                        </li>
+                        
+                    </ul>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- DERECHOS -->
+        <div id="derechos" class="container">
+            <p>Copyright &copy; 2018 Modulos Desk LLC. All rights reserved. Modulos design is patent-pending and
+                industrial desing protected.</p>
+        </div>
+
+        <!-- PREMIOS -->
+        <div id="premios" class="container">
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap');
+* { box-sizing: border-box;}
+body { background: #f8f7f7; margin: 0; padding: 0; font-family: 'Muli', sans-serif; display: block; font-size: 1rem; font-weight: 400; line-height: 1.5; color: #212529; display: block; transition: all 0.3s ease-in-out; }
+.container { width: 100%; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto;
+    max-width: 1420px; }
+h2 { font-weight: 700; font-size: 1.125rem; color: #43525a; line-height: 160%;
+margin: 1.875rem 0 1.875rem; display: block; margin-block-start: .83rem; margin-block-end: .83rem; }
+h3 { line-height: 1.2; display: block; font-size: 1.75sem; margin-block-start: 1em; margin-inline-end: 1em;}
+h4 {  margin-inline-start: 0; margin-inline-end: 0; font-size: 1.5rem; }
+ul { margin-block-start: 1em; scroll-margin-block-end: 1em; margin-bottom: 1rem; padding-inline-start: 0rem; }
+a { transition: all 0.3s ease-in-out; cursor: pointer; text-decoration: none;}
+p { margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; line-height: 160%; font-size: 1rem; margin-bottom: 1rem; line-height: 160%;}
+img { vertical-align: middle; border-style: none; }
+
+                    /*BARRA NAVEGACIÓN */
+/* Flex: los elementos flexibles tengan la misma longitud sin importar (las medidas de) su contenido, agrupa las siguientes tres
+    Flex-grow: especifica cuanto crecerá el elemento respecto al resto de los elementos flexibles dentro del mismo contenedor
+    Flex-shrink: especifica cuanto se encogerá el elemento respecto al resto de los elementos flexibles dentro del mismo contenedor
+    Flex-basis: especifica la longitud inicial del un elemento flexible (Auto: longitud igual a la definida, si no se estipula una longitud se ajustará al contenido) 
+    Auto: 1 1 auto / Initial: 0 1 auto / None: 0 0 auto / Inherit: propiedades de su padre */
+/* Flex-flow: es un atributo que unifica -direction y -wrap
+   Flex-direction: especifica la dirección de los flexibles. row: fila / row-reverse / column / column-reverse / initial / inherit
+   Flex-wrap: indica si un flexible se puede envolver (doblar en varias filas) o no. nowrap / wrap / wrap-reverse / initial / inherit */ 
+/* Justify-content: alinea los contenedores de los elementos flexibles cuando los elementos no usan todo el espacio disponible en la horizontal.
+    Flex-start: los elementos se ubican al principio del contenedor (de izq a der)
+    Flex-end: los elementos se ubican al final del contenedor
+    Center: se ubican desde el centro simétricamente
+    Space-between: usan la totalidad del espacio disponible distribuyendo espacio vacio entre los elementos
+    Space-around: como el anterior, pero los elementos extremos también disponen de espacio vacío contra los bordes 
+    Initial: se usa para asumir el valor superior o principal 
+    Inherit: */
+/* Position:
+    Relativa: se debe indicar el desplazamiento (top, bottom, left, right), mientras los otros elementos no ocuparán su lugar 
+    Fixed: el elemento permanece siempre en la misma zona de la página aunque se haga scroll 
+    Absoluta: se debe indicar el desplazamiento, usando como base la totalidad del cuerpo de documento, los otros elementos ocuparan su lugar por defecto */
+
+/* Block-level Elements: empiezan siempre en una nueva línea y ocupan la totalidad del ancho disponible. (div, hx, p, form, header, footer, section) */
+/* Inline Elements: no inicia en una nueva línea y solo toma el ancho del contenido mismo */
+/* Display: como un elemento es mostrado. 
+    None: se usa para ocultar elementos, luego tiene uso ligado a JavaScript. La diferencia con visibility:hidden es que con el primero la página ignarará el elemento y los demás se desplazarán
+    Inline: los elementos se ubican cono inline elements y las propiedades de w y h no tendrá efecto
+    Block: opuesto al anterior
+    contents: hace desaparecer al contenedor, haciendo que los hijos suban un nivel
+    Flex: muestra los elementos como un block-level con contenedor flexible
+    Grid: elementos como block-level con contenedor de cuadrícula
+    Inline-block: elementos como inline-level con contenedor como block, se ubican como inline y se les puede aplicar medidas w y h
+    Inline-flex: elementos inline con contenedor flexible
+    Inline-grid: elementos inline con contenedor de cuadrícula
+    Inline-table: elementos inline en una tabla
+    List-item: los elementos se comportan como <li>
+    run-in: se comportan como inline ó block dependiendo del contexto
+    Table: comportamiento como una <table>
+    Table-caption: comportamiento como <caption>
+    Table-column-group: <colgroup> / Table-header-group: <thead> / Table-footer-group: <tbody> / Table-cell: <td> / Table-column: <col> / Table-row: <tr>
+    Initial: propiedades default
+    Inherit: toma las propiedades de su padre  */
+/* Aling-items: especifica el alineamiento de los elementos en un contenedor flexible. Se puede indicar en específico un elemento con el atributo <aling-self>
+    Stretch: estira los elementos para llenar el contenedor
+    Center: posiciona en el centro  
+    Flex-start: al inicio del contenedor (arriba)
+    Flex-end: al final del contenedor (abajo)
+    Baseline: en la línea base del contenedor
+    Initial / Inherit*/
+/* Box-sixing: define como w y h son calculados, si incluye padding y borders ó no */
+/* Transition: reune lo siguientes cuatro
+    Transition-property: especifica el nombre de la propiedad CSS, el efecto iniciará cuando el cambio en la propiedad se haga, como hover. all / cualquier propiedad
+    Transition-duration: duración de la transición
+    Transition-timing-function: velocidad de la curva. 
+        erase: slow start, fast, slowly end (0.25,0.1,0.25,1)
+        linear: same speed (0,0,1,1)
+        erase-in: slow start (0.42,0,1,1)
+        erase-out: slow end (0,0,0.58,1)
+        erase-in-out: slow start and end (0.42,0,0.58,1)
+        step-start: pasos (1, start)
+        step-end: pasos (1, end)
+        steps(int,start|end): primer parámetro para el número de intervalos, el segundo parámetro (opcional) para start ó end, indicando el punto de cambio de valor
+        cubic-bezier(n,n,n,n)
+        initial / inherit 
+    Transition-delay: señala el retraso de inicio*/
+    /* Transform: aplica para 2D o 3D, permite rotar, escalar, mover, torcer, etc.  */
+nav { display: flex; position: relative; padding: .5rem 1rem; justify-content: space-between; align-items: center; flex-flow: row nowrap; font-size: .9375rem; }
+nav > section { display: flex; position: relative; flex-wrap: nowrap; align-items: center; justify-content: space-between; min-width: 88.75rem; width: 100%; list-style-type: none;}
+#nav-izq { order: 1; flex: 1 1 auto; display: flex; text-align: left; }
+#nav-img { order: 2; flex-grow: 0; flex-shrink: 0; margin: .625rem 1.875rem; transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); transform: translateY(0);}
+#nav-der { order: 3; flex: 1 1 auto; text-align: right; flex-wrap: nowrap; display: flex; align-items: center;}
+nav ul { flex-direction: row; }
+#nav-principal li { display: inline-block;}
+nav li a { color: #2d2d2d; padding: .3125rem .625rem; text-decoration: none; cursor: pointer; }
+#nav-a-img { margin: .625rem 1.875rem; transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+nav li a:hover { color: #28a5bd; }
+#nav-img img { height: 52.5px; width: auto; }
+#nav-sep { height: 2rem; width: 0.0625rem; background-color: #ccc; margin: 0 .9375rem; display: block; }
+#nav-img:hover {  transform: translateY(10px); }
+#nav-car { padding: .3125rem .625rem; color: #2d2d2d; font-size: .9375rem; }
+.dropdown {position: relative; display: inline-block;}
+.dropdown-content { display: none; position: absolute; background-color: #fff;   z-index: 1; text-align: left; box-sizing: content-box; padding: .9375rem 0; font-size: .9375rem; border: 1px solid #00000026; border-radius: .25rem; }
+.dropdown-content li {left: 2px;}
+.dropdown-content a { color: black; padding: 12px 1rem; text-decoration: none; display: block}
+.show { display: block }
+.nav-ddm {display: block;}
+.nav-ddm > a { padding: .5rem 1.25rem; width: 100%; clear: both; font-weight: 400; color: #212529; text-align: left; white-space: nowrap; }
+.nav-ddm > a:hover { color: #28a5bd; cursor: pointer; padding: .5rem 1.5625rem; }
+/*.dropdown-menu { display: block}
+.navtext:hover .dropdown-menu { display: block; }*/
+
+
+
+/*SLIDER*/
+#great-slider { background-color: #f3f2f0; display: block;}
+#slider { position: relative; color: #212529; text-align: left; display: flex; padding: 0 1.875rem; min-width: 88.75rem; width: 100%; }
+#slider-text { padding: 5rem 0; flex: 0 0 26.25rem ; margin-right: 2.5rem;}
+#slider-text h1 { font-size: 3rem; font-weight: 700; line-height: 130%; margin: 0 0 1.5625rem; margin-block-start: 0.83em; margin-block-end: 0.83em;}
+#slider-text p { font-size: 1rem; margin: 0; line-height: 160%; }  
+#slider-blue-frame { display: inline-block; background-color: #28a5bd; border: .125rem solid #28a5bd; color: #fff; font-size: 1.125rem; padding: .75rem 1.6875rem; margin-top: 1.875rem;}
+#slider-blue-frame:hover { text-decoration: underline; background-color: #1f6c7b; }
+#slider-img { position: relative; display: flex; flex-grow: 1; flex-shrink: 1; align-items: center; justify-content: center; }
+/* #carrusel { position: relative; width: 100%; overflow: hidden; }*/
+#slideer-img > img { display: block; width: 100%; height: auto; }
+/*#slider-img > img { position: relative; align-items: center; max-width: 851px; height: 458px; top: 120px; }*/
+
+
+
+/*OVERFLOW*/
+#overflow { padding: 0 0 5rem; }
+#all-overflow { display: flex; align-items: center; overflow: auto; padding-top: 1.25rem; }
+.over-module { flex: 1 1 100%; margin: 0 1.875rem; min-width: 10rem;}
+/* Overflow: indica que sucede cuando el contenido sale del la caja
+    visible: el elemento se muestra fuera de la caja
+    hidden: solo se muestra la parte del contenido dentro d ela caja
+    scroll: se muestra todo el contenido, pero se agrega una barra de scroll
+    auto: si el contenido sale de la caja pone un scroll
+    initial / inherit */
+.img-module { position: relative; overflow: hidden;}
+.img-module > img { width: 7.5rem; margin: 0 auto; height: auto; display: block; transition: all 0.4s ease-in-out; transform: translateY(.9375rem); }
+.img-module > img:hover { transform: translateY(0); }
+/* Para este caso box-shadow no tiene un desempeño visual apropiado
+ Box-shadow: pone sombra a un elemento, los siguientes dos atributos son obligatorios, mientras el resto son opcionales
+    h-offset: movimiento horizontal de la sombra
+    v-offset: movimiento vertical de la sombra
+    blur: rádio de difuminado expresado en px
+    spread: rádio de propagación 
+    color:
+    inset: el valor por defecto es "outset", esta propiedad mete la sombra dentro del objeto
+    initial / inherit 
+.img-module > div.shadow { width: 90%; height: .375rem; box-shadow: inset 0rem 0rem .0625rem #333; }*/
+/* Filter: define efectos visuales como blur y saturation (usualmente una img)
+    blur(px): efecto de difuminado
+    brightness(%): 0%>negro / 100%>img normal / >100%->incrementa el brillo
+    contrast(%): igual al anterior pero con el contraste
+    drop-shadow(h-shadow v-shadow blur spread color): como box-shadow, pero con imagenes
+    grayscale(%): 0%>original / 100%>gris (blanco y negro)
+    hue-rotate(deg): rotación de matiz. 0>original / 360>total
+    invert(%): invierte las muestras 0>original / 100>completamente invertido
+    opacity(%): opacidad interpretada como una especie de transparencia. 0>transparente / 100>original
+    saturate(%): 0>insaturada / 100>original / >100->super-saturación
+    sepia(%): 0>original / 100>sepia
+    url(): archivo XML que especifique un filtro SVG, puede incluir un ancla a un elemento específico. Ej: filter: url(svg-url#element-id)
+    initial / inherit */
+.img-module > span.sombra-baja { display: block; width: 90%; height: .375rem; margin: 0 5%; background-color: #000; filter: blur(6px); border-radius: 100%; position: absolute; bottom: 0rem; }
+.text-module { display: flex; align-items: center; margin-top: 1.25rem; }
+.text-module > img { flex: 0 0 1.875rem; width: 1.875rem; margin-right: .625rem; vertical-align: middle;  }
+.text-module > span { flex: 1 1 100%; font-size: 0.75rem; }
+
+
+
+/*SKETCH*/
+#great-sketch { background-color: #f3f2f0; padding: 6.25rem 0; }
+#sketch { display: flex; align-items: center; }
+#sketch-mod1 { flex: 0 0 40%; margin-right: 3.125rem; }
+#sketch-mod1 > h1 { font-size: 2rem; line-height: 150%; font-weight: bold; margin: 0 0 1.25rem; min-width: 31.25rem; color: #43525a; }
+#sketch-mod1 > p { font-size: .875rem; line-height: 160%; margin-bottom: 1rem; }
+#sketch-mod1 > span { margin-top: 1.875rem; margin-bottom: .9375rem; font-size: .875rem; font-style: italic; color: #666; display: block}
+#sketch-mod1 > a { padding: 9.5px 1.3125rem; font-size: .875rem; text-decoration: none; background-color: #28a5bd; color: #fff;}
+#sketch-mod1 > a:hover { text-decoration: underline; background-color: #1f6c7b; }
+#sketch-mod2 { flex: 1 1 100%; }
+
+
+
+/* 4C */
+#c4 { padding: 0 1.875rem; min-width: 88.75rem; width: 100%; }
+#c4 > h3 { font-weight: 700; font-size: 1.5rem; margin: 0 0 2.5rem; }
+#c4 > ul { display: flex; margin-left: -3.125rem; margin-right: -3.125rem; padding: 0;}
+#c4 > ul > li {flex: 1 1 25%; list-style-type: none; margin: 0 .625rem; display: flex; border: 1px solid #dedede; box-sizing: border-box; transition: all 0.3s ease-in-out; box-shadow: 0 0 0.3125rem 0 #0000000d;}
+/* Opacity: como una especie de transparencia. 0.0>transparente / 1.0>original */
+#c4 > ul > li:hover:not(:last-child) { opacity: 0.8; box-shadow: 0 0 0.625rem  0 #00000026;}
+#c4 > ul > li > article { display: flex; flex-direction: column; color: #2d2d2d; background-size: contain; background-position: center bottom; background-repeat: no-repeat; padding: 2.5rem 1.875rem 13.125rem; }
+.h4-4c { font-size: 1.25rem; font-weight: bold; margin: 0 0 .625rem; }
+.frame p { font-size: .875rem; opacity: .85; }
+.s-4c { display: block; width: 100%; height: 1px; background-color: #2d2d2d; opacity: .2; margin: .625rem 0; }
+.s-4c + div { display: flex; }
+.info-4c { font-size: .75rem; opacity: .85; width: 5rem; }
+.cont-4c { font-size: .875rem; }
+.cont_price-4c { font-size: 1rem; font-weight: bold; }
+.blue-4c { align-items: center; font-size: .875rem; font-weight: bold; color: #28a5bd; margin-right: .625rem; }
+#l4-c4 { border: none; align-items: center; margin: 0 .625rem; padding: 0 2.5rem; }
+#frame4 { padding: 0rem; display: flex; flex-direction: column; color: #2d2d2d;  }
+#frame4 > span { font-size: 1.75rem; margin: 0 0 1.25rem; display: block; font-weight: 400;}
+#frame4 p { font-size: .875rem; color: #666; margin-top: 0;  }
+/*#frame4 div { position: relative; display: inline-block; margin: 1.875rem 0 0; }*/
+#frame4 a { display: inline-block; background-color: #28a5bd; border: .125rem solid #28a5bd; color: #fff; padding: .5833rem 1.325rem; font-size: .875rem; }
+#frame4 > div { position: relative; display: inline-block; margin: 1.875rem 0 0; box-sizing: border-box; }
+#instruccion-4c { font-family: 'Gloria Hallelujah', cursive; position: absolute; font-size: 1rem; top:  -1.875rem; right: -6.875rem; display: block; }
+.instruccion > span { color: #7b7b7b; text-align: center; min-width: 8.75rem; transform: rotate(15deg); font-size: 1rem;}
+.instruccion > img  { width: 1.5rem; height: auto; position: relative; display: block; margin: 0 auto 0; }
+
+
+
+/* 3IMG */ 
+#big-img3 { padding: 5rem 0; background-color: #f3f2f0;}
+/* Grid: propiedad que agrupa:
+    grid-template-rows/ grid-template-columns: especifica el tamaño (y número) de las filas y las columnas
+    grid-template-areas: especifica el diseño de la cuadrícula usando nombre de los elementos
+    grid-template-rows/grid-auto-columns: especifica la altura de las filas y deja automático la medidad de las columnas
+    grid-auto-rows/grid-template-columns: especifíca automáticamente el tamaño de las filas, mientras se define la medida de las columnas
+    grid-template-rows/grid-auto-flow-grid-auto-columns: especifica la medida de las filas (altura) y como se auto-ubican los elementos al igual que se auto configura el tamaño de las columnas
+    grid-auto-flow grid-auto-rows/grid-template-columns: especifica como se auto-ponen los elementos, y se configura de forma automática el tamaño de las filas, mientraad se define el grid-template-columns
+    initial / inherit
+     */
+#img3 { display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 3.75rem; align-items: center; padding: 0 1.875rem; }
+#img3 div:first-child { display: flex; flex-wrap: wrap; }
+#img3-child img:first-child {display: block ; margin-bottom: 2.5rem;  flex: 0 0 100%; opacity: 1;}
+#img3-child img:nth-child(2) {flex: 0 0 50%;padding-right: 1.25rem  }
+#big-video { box-sizing: border-box; display: block; position: relative; flex: 0 0 50%; }
+#little-video { position: absolute; top: 0; bottom: 0; left: 1.25rem; right: 0; overflow: hidden; }
+/* Object-fit: como una img o un video cambia sus medidas para llenar su contenedor
+    fill: llena el contenedor y se deforma de ser necesario
+    contain: se escala manteniendo su proporción
+    cover: se cambia la medida para llenar el contenedor, sin afectar su proporción
+    scale-down: se cambia la medida como si no hubiese contenedor, el resultado es un tamaño menor
+   Object-position: se usa junto con la anterior para especificar como se debe posicionar el contenido usando coordenadas x/y dentro de los límites del contenedor */
+#little-video video { opacity: 1; object-position: left; object-fit: cover; }
+#img3-second { position: relative; }
+#img3-second h2 { font-weight: 400; font-size: 2.25rem; margin: 0 0 1.25rem; }
+#img3-second p { color: #666; font-size: .875rem; }
+#list-3img { display: grid; grid-template-columns: auto auto; grid-column-gap: 1.875rem; padding-inline-start: 0; }
+.li-3img { display: flex; align-items: center; margin: .3125rem 0; }
+.li-3img img { width: 3rem; height: auto; display: block; margin-right: .9375rem; }
+.li-3img span { font-weight: 600; font-size: 1rem; display: block; }
+
+
+
+/* Aling-self */
+#img3-second div { margin: 1.875rem 0 0; padding: 1.875rem 0 0; width: 100%; align-self: flex-end; border-top: .0625rem solid #ddd; }
+#img3-second div a {color: #28a5bd;}
+#img3-second div a:hover { text-decoration: underline; color: #15606e; }
+
+
+
+/* MARCAS */
+#marcas {padding: 5rem 0 3.75rem; display: block; box-sizing: border-box;}
+#art-marcas { padding: 0 1.875rem; }
+#art-marcas h3 { text-align: center; margin: 0 0 .625rem; font-weight: 400; font-size: 1.5rem; }
+#img-marcas { display: flex; align-items: center; justify-content: space-around; width: 100%; }
+#img-marcas a { filter: grayscale(1); margin: 1.25rem; }
+#img-marcas img { height: 5rem; width: auto; }
+
+
+/* VIDEO */
+#video { padding: 6.25rem 0; background-color: #bceadf; }
+#video article { display: flex; align-items: center; }
+#video article div:first-child { flex: 1 1 100%; }
+#video article div:last-child { flex: 0 0 28.75rem;  padding-right: 3.75rem; margin-left: 3.125rem; box-sizing: border-box;}
+#video-div1 { position: relative; padding-bottom: 56.25%; overflow: hidden; max-width: 100%; margin-left: 0; flex: 0 0 28.75rem; padding-right: 3.75rem;}
+#video-div1 iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+#video h2 { font-size: 2.625rem; font-weight: bold; margin: 0 0 1.875rem; }
+#video p { font-size: .875rem; line-height: 160%; }
+
+
+/* INDICE */
+#indice {display: flex;}
+#indice>a { display: block; padding: .625rem 2.5rem .625rem 0; margin-right: 2rem; border-right: .0625rem solid #ddd; }
+#indice>a>img { width: 6.25rem; height: auto; }
+#indice>nav { display: block; }
+#ind-contenedor { display: flex; padding: 0; margin: 0;}
+.ind-list { flex-grow: 0; flex-shrink: 0; margin-right: 1.875rem; display: list-item; list-style-type: none; padding-inline-start: 40px;}
+.ind-list li:first-child { font-size: .75rem; color: #bababa; margin-bottom: 1.25rem; }
+.li-el { font-size: .875rem; margin: .4375rem 0; }
+.li-el a { color: #666; }
+
+
+
+/* DERECHOS  */
+#derechos { padding: 2.5rem 0; margin-top: 2.5rem; margin-bottom: 2.5rem; border-top: .0625rem solid #ddd; border-bottom: .0625rem solid #ddd; color: #666; font-size: .75rem; text-align: center; }
