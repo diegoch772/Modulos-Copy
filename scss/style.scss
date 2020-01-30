@@ -5,25 +5,33 @@
 
 // Font Variables
 $muli-sans: "Muli", sans-serif;
+$gloria-cursive: "Gloria Hallelujah", cursive;
 
 
 // Colors Variables
-$co-fondo: #f8f7f7;
 $text-n1: #2d2d2d;
+$text-g1: #666;
+$co-fondo: #f8f7f7;
 $co-blanco: #fff;
 $co-hover: #28a5bd;
 $co-button-hover: #1f6c7b;
+$co-negrop: #000;
+$co-blanco-sections: #f3f2f0;
+$co-gris7: #7b7b7b;
 
 // Transitions
 $transition-3s: all 0.3s ease-in-out;
 $var-trans: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
 // Font-sizes
+$fz-12: .75rem;
+$fz-14: .875rem;
 $fz-15: .9375rem;
 $fz-16: 1rem;
 $fz-18: 1.125rem;
 $fz-24: 1.5rem;
 $fz-28: 1.75rem;
+$fz-32: 2rem;
 $fz-48: 3rem;
 
 // font-weight
@@ -315,4 +323,251 @@ nav {
     align-items: center;
     overflow: auto;
     padding-top: 1.25rem;
+}
+.over-module {
+    flex: 1 1 100%;
+    margin: 0 1.875rem;
+    min-width: 10rem;
+}
+.img-module {
+    position: relative;
+    overflow: hidden;
+
+    > img {
+        display: block;
+        width: 7.5rem;
+        height: auto;
+        margin: 0 auto;
+        transition: all 0.4s ease-in-out;
+        transform: translateY(.9375rem);
+
+        &:hover {
+            transform: translateY(0);
+        }
+    }
+    > span.sombra-baja {
+        display: block;
+        width: 90%;
+        height: .375rem;
+        margin: 0 5%;
+        background-color: $co-negrop;
+        position: absolute;
+        bottom: 0rem;
+        border-radius: 100%;
+        filter: blur(6px);
+    }
+    .tex-module {
+        display: flex;
+        align-items: center;
+        margin-top: 1.25rem;
+
+        > img {
+            flex: 0 0 1.875rem;
+            width: 1.875rem;
+            margin-right: .625rem;
+            vertical-align: middle;
+        }
+        > span {
+            flex: 1 1 100%;
+            font-size: .75rem;
+        }
+    }
+}
+
+// SKETCH
+#great-sketch {
+    background-color: $co-blanco-sections;
+    padding: 6.25rem 0;
+}
+#sketch {
+    display: flex;
+    align-items: center;
+
+    &-mod1 {
+        flex: 0 0 40%;
+        margin-right: 3.125rem;
+
+        > h1 {
+            font-size: $fz-32;
+            line-height: 150%;
+            font-weight: bold;
+            margin: 0 0 1.25rem;
+            min-width: 31.25rem;
+            color: #43525a;
+        }
+        > p {
+            font-size: $fz-14;
+            line-height: 160%;
+            margin-bottom: 1rem;
+        }
+        > span {
+            display: block;
+            font-size: $fz-14;
+            font-style: italic;
+            color: $text-g1;
+            margin-top: 1.875rem;
+            margin-bottom: .9375rem;
+        }
+        > a {
+            font-size: $fz-14;
+            padding: 9.5px 1.3125rem;
+            text-decoration: none;
+            background-color: $co-hover;
+            color: $co-blanco;
+
+            &:hover {
+                text-decoration: underline;
+                background-color: $co-button-hover;
+            }
+        }
+    }
+    &-mod2 {
+        flex: 1 1 100%;
+    }
+}
+
+// 4C
+#c4 {
+    padding: 0 1.875rem;
+    min-width: 88.75rem;
+    width: 100%;
+
+    > h3 {
+        font-size: $fz-24;
+        font-weight: $fw-700;
+        margin: 0 0 2.5rem;
+    }
+    > ul {
+        display: flex;
+        margin-left: -3.125rem;
+        margin-right: -3.125rem;
+        padding: 0;
+
+        > li {
+            display: flex;
+            flex: 1 1 25%;
+            list-style-type: none;
+            margin: 0 .625rem;
+            border: 1px solid #dedede;
+            box-sizing: border-box;
+            transition: $transition-3s;
+            box-shadow: 0 0 0.3125rem 0 #0000000d;
+
+            &:hover:not(:last-child) {
+                opacity: 0.8;
+                box-shadow: 0 0 0.625rem 0 #00000026;
+            }
+            > article {
+                display: flex;
+                color: $text-n1;
+                flex-direction: column;
+                background-size: contain;
+                background-position: center bottom;
+                background-repeat: no-repeat;
+                padding: 2.5rem 1.875rem 13.125rem;
+            }
+        }
+    }
+}
+.h4-4c {
+    font-size: $fz-18;
+    font-weight: bold;
+    margin: 0 0 .625rem;
+}
+.frame p {
+    font-size: $fz-14;
+    opacity: .85;
+}
+.s-4c {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $text-n1;
+    opacity: .2;
+    margin: .625rem 0;
+
+    + div {
+        display: flex;
+    }
+}
+.info-4c {
+    font-size: $fz-12;
+    width: 5rem;
+    opacity: .85;
+}
+.cont-4c {
+    font-size: $fz-14;
+}
+.cont_price-4c {
+    font-size: $fz-16;
+    font-weight: bold;
+}
+.blue-4c {
+    font-size: $fz-14;
+    font-weight: bold;
+    color: $co-hover;
+    align-self: center;
+    margin-right: .625rem;
+}
+#l4-c4 {
+    border: none;
+    align-items: center;
+    margin: 0 .625rem;
+    padding: 0 2.5rem;
+}
+#frame4 {
+    display: flex;
+    padding: 0rem;
+    flex-direction: column;
+    color: $text-n1;
+
+    > span {
+        display: block;
+        font-size: $fz-28;
+        font-weight: 400;
+        margin: 0 0 1.25rem;
+    }
+    p {
+        font-size: $fz-14;
+        color: $text-g1;
+        margin-top: 0;
+    }
+    a {
+        display: inline-block;
+        background-color: $co-hover;
+        border: .125rem solid $co-hover;
+        color: $co-blanco;
+        padding: .5833rem 1.325rem;
+        font-size: $fz-14;
+    }
+    > div {
+        display: inline-block;
+        position: relative;
+        margin: 1.875rem 0 0;
+        box-sizing: border-box;
+    }
+}
+#instruccion-4c {
+    display: block;
+    font-family: $gloria-cursive;
+    position: absolute;
+    font-size: $fz-16;
+    top: -1.875rem;
+    right: -6.875rem;
+}
+.instruccion {
+    > span {
+        color: $co-gris7;
+        text-align: center;
+        min-width: 8.75rem;
+        transform: rotate(15deg);
+        font-size: $fz-16;
+    }
+    > img {
+        display: block;
+        position: relative;
+        height: auto;
+        width: 1.5rem;
+        margin: 0 auto 0;
+    }
 }
