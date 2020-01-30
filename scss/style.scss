@@ -571,3 +571,141 @@ nav {
         margin: 0 auto 0;
     }
 }
+
+// 3IMG
+#big-img3 {
+    padding: 5rem 0;
+    background-color: $co-blanco-sections;
+}
+#img3 {
+    display: grid;
+    align-items: center;
+    padding: 0 1.875rem;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 3.75rem;
+
+    div:first-child {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-child {
+        img:first-child {
+        display: block;
+        margin-bottom: 2.5rem;
+        opacity: 1;
+        flex: 0 0 100%;
+        }
+        img:nth-child(2) {
+            flex: 0 0 50%;
+            padding-right: 1.25rem;
+        }
+    }
+}
+#big-video {
+    display: block;
+    position: relative;
+    flex: 0 0 50%;
+    box-sizing: border-box;
+}
+#little-video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 1.25rem;
+    right: 0;
+    overflow: hidden;
+
+    video {
+        opacity: 1;
+        object-fit: cover;
+        object-position: left;
+    }
+}
+#img3-second {
+    position: relative;
+
+    h2 {
+        font-weight: 400;
+        font-size: 2.25rem;
+        margin: 0 0 1.25rem;
+    }
+    p{
+        color: $text-g1;
+        font-size: $fz-14;
+    }
+}
+#list-3img {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 1.875rem;
+    padding-inline-start: 0;
+}
+.li-3img {
+    display: flex;
+    align-items: center;
+    margin: .3125rem 0;
+
+    img {
+        display: block;
+        width: 3rem;
+        height: auto;
+        margin-right: .9375rem;
+    }
+    span {
+        display: block;
+        font-size: $fz-16;
+        font-weight: 600;
+    }
+}
+
+// ALING-SELF
+#img3-second {
+    div {
+        padding: 1.875rem;
+        margin: 1.875rem 0 0 ;
+        width: 100%;
+        align-self: flex-end;
+        border-top: .0625rem solid #ddd;
+
+        a {
+            color: $co-hover;
+
+            &:hover {
+                text-decoration: undeline;
+                color: $co-button-hover;
+            }
+        }
+    }
+}
+
+// MARCAS
+#marcas {
+    display: block;
+    padding: 5rem 0 3.75rem;
+    box-sizing: border-box;
+}
+#art-marcas {
+    padding: 0 1.875rem;
+
+    h3 {
+        margin: 0 0 .625rem;
+        font-weight: 400;
+        font-size: $fz-24;
+        text-align: center;
+    }
+}
+#img-marcas {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+
+    a {
+        margin: 1.25rem;
+        filter: grayscale(1);
+    }
+    img {
+        height: 5rem;
+        width: auto;
+    }
+}
